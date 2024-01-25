@@ -1,0 +1,66 @@
+{
+  "name": "icloud-notes",
+  "version": "1.1.0",
+  "description": "An Unofficial desktop app for iCloud Notes",
+  "main": "main.js",
+  "homepage": "https://apps.himelrana.com/icloud-notes",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "asar": true,
+    "appId": "com.himelrana.icloud-notes",
+    "directories": {
+      "buildResources": "."
+    },
+    "files": [
+      "*",
+      "node_modules/**/*",
+      "package.json",
+      "icon.png"
+    ],
+    "linux": {
+      "target": [
+        "snap",
+        "deb"
+      ],
+      "icon": "./icon.png",
+      "category": "Network;TextTools;Office;GTK;GNOME"
+    },
+    "snap": {
+      "confinement": "strict",
+      "grade": "stable",
+      "summary": "Linux Client for iCloud Notes",
+      "plugs": [
+        "desktop",
+        "desktop-legacy",
+        "home",
+        "x11",
+        "unity7",
+        "browser-support",
+        "network",
+        "gsettings",
+        "opengl"
+      ]
+    },
+    "deb": {
+      "icon": "./icon.png",
+      "category": "Network;TextTools;Office;GTK;GNOME"
+    }
+  },
+  "keywords": [],
+  "author": {
+    "name": "Himel",
+    "email": "dev@himelrana.com"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^28.1.4"
+  },
+  "dependencies": {
+    "electron-context-menu": "^3.6.1"
+  }
+}
