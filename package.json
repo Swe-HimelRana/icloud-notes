@@ -1,6 +1,6 @@
 {
   "name": "icloud-notes",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "An Unofficial desktop app for iCloud Notes",
   "main": "main.js",
   "homepage": "https://apps.himelrana.com/icloud-notes",
@@ -58,7 +58,8 @@
   },
   "license": "ISC",
   "devDependencies": {
-    "electron": "^28.1.4"
+    "electron": "^30.0.1",
+    "electron-builder": "^24.13.3"
   },
   "dependencies": {
     "electron-context-menu": "^3.6.1"
