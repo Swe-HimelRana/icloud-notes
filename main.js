@@ -1,4 +1,4 @@
-const { app, BrowserWindow, ipcMain, shell, ipcRenderer } = require('electron');
+const { app, BrowserWindow, ipcMain, shell, ipcRenderer, nativeTheme } = require('electron');
 const path = require('path');
 const contextMenu = require('electron-context-menu');
 
@@ -109,6 +109,17 @@ app.whenReady().then(() => {
       {
         label: 'Toggle Full Screen',
         role: 'togglefullscreen'
+      },
+      {
+	label: 'Toggle Dark Mode',
+	click: () => {
+	  if (nativeTheme.shouldUseDarkColors) {
+	    nativeTheme.themeSource = 'light'
+	  } else {
+	    nativeTheme.themeSource = 'dark'
+	  }
+	  return nativeTheme.shouldUseDarkColors
+	}	
       }
     ],
   });
