@@ -58,7 +58,7 @@ Simplify your note-taking routine and enjoy a dedicated desktop space for your i
     # Add mirror.himelrana.com in your system
     sudo apt install curl
     sudo curl -fsSLo /usr/share/keyrings/himel.gpg https://66355b217734305f6607e3f6--mirror-himelrana.netlify.app/himel.gpg
-    echo "deb [signed-by=/usr/share/keyrings/himel.gpg] https://66355b217734305f6607e3f6--mirror-himelrana.netlify.app/ stable main"|sudo tee /etc/apt/sources.list.d/himel-release list
+    echo "deb [signed-by=/usr/share/keyrings/himel.gpg] https://66355b217734305f6607e3f6--mirror-himelrana.netlify.app/ stable main"|sudo tee /etc/apt/sources.list.d/himel-release.list
     sudo apt update
 ```
 
