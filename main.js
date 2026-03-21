@@ -4,7 +4,9 @@ const contextMenu = require('electron-context-menu');
 
 if (process.platform === 'linux') {
   app.commandLine.appendSwitch('enable-features', 'UseOzonePlatform');
-  app.commandLine.appendSwitch('ozone-platform', 'auto');
+  if (process.env.XDG_SESSION_TYPE === 'wayland') {
+    app.commandLine.appendSwitch('ozone-platform', 'wayland');
+  }
 }
 
 let mainWindow;
