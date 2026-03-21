@@ -6,7 +6,7 @@
   "homepage": "https://apps.himelrana.com/icloud-notes",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron .",
+    "start": "ELECTRON_OZONE_PLATFORM_HINT=auto electron .",
     "pack": "electron-builder --dir",
     "dist": "electron-builder"
   },

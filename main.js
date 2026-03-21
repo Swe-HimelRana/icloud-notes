@@ -2,6 +2,7 @@ const { app, BrowserWindow, ipcMain, shell, ipcRenderer, nativeTheme } = require
 const path = require('path');
 const contextMenu = require('electron-context-menu');
 
+
 let mainWindow;
 
 function createWindow() {
