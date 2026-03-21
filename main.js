@@ -2,6 +2,10 @@ const { app, BrowserWindow, ipcMain, shell, ipcRenderer, nativeTheme } = require
 const path = require('path');
 const contextMenu = require('electron-context-menu');
 
+if (process.platform === 'linux') {
+  app.commandLine.appendSwitch('enable-features', 'UseOzonePlatform');
+  app.commandLine.appendSwitch('ozone-platform', 'auto');
+}
 
 let mainWindow;
 

@@ -43,7 +43,8 @@
         "browser-support",
         "network",
         "gsettings",
-        "opengl"
+        "opengl",
+        "wayland"
       ]
     },
     "deb": {
