@@ -2,13 +2,6 @@ const { app, BrowserWindow, ipcMain, shell, ipcRenderer, nativeTheme } = require
 const path = require('path');
 const contextMenu = require('electron-context-menu');
 
-if (process.platform === 'linux') {
-  app.commandLine.appendSwitch('enable-features', 'UseOzonePlatform');
-  if (process.env.XDG_SESSION_TYPE === 'wayland') {
-    app.commandLine.appendSwitch('ozone-platform', 'wayland');
-  }
-}
-
 let mainWindow;
 
 function createWindow() {
